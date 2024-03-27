@@ -12,9 +12,10 @@ public class CameraController : MonoBehaviour
     Vector3 mouseWorldPos = Vector3.zero;
     Vector3 velocity = Vector3.zero;
 
-    Vector3 followPos;
     Vector3 targetPos;
     Vector3 smoothed;
+    Vector3 followVelocity;
+    Vector3 lastFollowPos;
 
     private void Awake()
     {
@@ -24,7 +25,6 @@ public class CameraController : MonoBehaviour
         {
             mouseWorldPos = Camera.main.ScreenToWorldPoint((Vector3)ctx.ReadValue<Vector2>());
         };
-
         inputs.Camera.Enable();
     }
 
@@ -35,9 +35,13 @@ public class CameraController : MonoBehaviour
 
     private void Update()
     {
-        followPos = follow.transform.position + Vector3.back * 10f;
-        targetPos = Vector3.ClampMagnitude(mouseWorldPos - followPos, maxDistance);
-        smoothed = Vector3.SmoothDamp(followPos, targetPos, ref velocity, smoothTime);
-        transform.position = smoothed;
+        followVelocity = follow.position - lastFollowPos;
+        targetPos = follow.position + Vector3.ClampMagnitude(mouseWorldPos - follow.position, maxDistance) + (Vector3.back * 10f);
+        smoothed = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothTime );
+        transform.position = followVelocity + smoothed;
+    }
+    private void LateUpdate()
+    {
+        lastFollowPos = follow.position;
     }
 }

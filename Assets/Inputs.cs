@@ -147,6 +147,15 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""LookSpeed"",
+                    ""type"": ""Value"",
+                    ""id"": ""b775fe6a-8d18-43dd-bbfc-8c010e6dfd6b"",
+                    ""expectedControlType"": ""Delta"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -158,6 +167,17 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e974abf9-061b-4cbf-a0cf-dedd15707f56"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LookSpeed"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -174,6 +194,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         // Camera
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_Look = m_Camera.FindAction("Look", throwIfNotFound: true);
+        m_Camera_LookSpeed = m_Camera.FindAction("LookSpeed", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -298,11 +319,13 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Camera;
     private List<ICameraActions> m_CameraActionsCallbackInterfaces = new List<ICameraActions>();
     private readonly InputAction m_Camera_Look;
+    private readonly InputAction m_Camera_LookSpeed;
     public struct CameraActions
     {
         private @Inputs m_Wrapper;
         public CameraActions(@Inputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Look => m_Wrapper.m_Camera_Look;
+        public InputAction @LookSpeed => m_Wrapper.m_Camera_LookSpeed;
         public InputActionMap Get() { return m_Wrapper.m_Camera; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -315,6 +338,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @LookSpeed.started += instance.OnLookSpeed;
+            @LookSpeed.performed += instance.OnLookSpeed;
+            @LookSpeed.canceled += instance.OnLookSpeed;
         }
 
         private void UnregisterCallbacks(ICameraActions instance)
@@ -322,6 +348,9 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @LookSpeed.started -= instance.OnLookSpeed;
+            @LookSpeed.performed -= instance.OnLookSpeed;
+            @LookSpeed.canceled -= instance.OnLookSpeed;
         }
 
         public void RemoveCallbacks(ICameraActions instance)
@@ -348,5 +377,6 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
     public interface ICameraActions
     {
         void OnLook(InputAction.CallbackContext context);
+        void OnLookSpeed(InputAction.CallbackContext context);
     }
 }
