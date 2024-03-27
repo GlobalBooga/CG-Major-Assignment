@@ -3,10 +3,10 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] float speed = 1;
+    [SerializeField] GameObject arrowPrefab;
 
     Inputs inputs;
     Vector3 moveDir;
-
 
     private void Awake()
     {
@@ -19,6 +19,11 @@ public class Movement : MonoBehaviour
         inputs.General.Move.canceled += ctx => 
         {
             moveDir = Vector3.zero;
+        };
+
+        inputs.General.RMB.performed += ctx => 
+        {
+            Instantiate(arrowPrefab, transform.position, arrowPrefab.transform.rotation);
         };
 
         inputs.General.Enable();
