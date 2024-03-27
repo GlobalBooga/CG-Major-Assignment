@@ -338,6 +338,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1884,7 +1897,80 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      floor_0: -4373184736405950995
+      floor_1: 4158732434352698325
+      floor_10: -6716143812497719498
+      floor_11: -238930871357459764
+      floor_12: 1546552405686873150
+      floor_13: -2362380025853997434
+      floor_14: -368596763120020550
+      floor_15: 1338063624304658472
+      floor_16: 2509881989800874174
+      floor_17: -737837024687671454
+      floor_18: 3038923913770714274
+      floor_19: -968770383251345080
+      floor_2: 4341242654334979365
+      floor_20: 6735105382651259636
+      floor_21: 6433854208847190039
+      floor_22: 1492911798537794108
+      floor_23: 5048416880140299565
+      floor_24: 7641892208429834689
+      floor_25: -800442207075965033
+      floor_26: 7649971556135936819
+      floor_27: 4870877652962855886
+      floor_28: -435046055405278703
+      floor_29: 4275265726231819746
+      floor_3: 1903813881350671106
+      floor_30: -9055321195671008437
+      floor_31: 8383685822998553962
+      floor_32: -5034969528391634466
+      floor_33: 2551854644190722719
+      floor_34: -4943970475600233264
+      floor_35: -2987767069438478369
+      floor_36: 291018983614156155
+      floor_37: 3750309937199576963
+      floor_38: 5602807671860324422
+      floor_39: -4753789512137068514
+      floor_4: 8666153195878230358
+      floor_40: -3056482181439526140
+      floor_41: -6685596499255760803
+      floor_42: -1098774980844157507
+      floor_43: -7549047806516835191
+      floor_44: 7923879727469168163
+      floor_45: 384148847483732694
+      floor_46: 9152501972413254891
+      floor_47: -71610273293795249
+      floor_48: -2293774143102967410
+      floor_49: -6512208610414713851
+      floor_5: 4633350270274512122
+      floor_50: 461872368936019651
+      floor_51: 252377652158392065
+      floor_52: 8268456416014038034
+      floor_53: 2474841612100836845
+      floor_54: 445852485584619867
+      floor_55: 6562677597701442729
+      floor_56: -3274478132227461676
+      floor_57: -2068269053406417002
+      floor_58: -564367763420502088
+      floor_59: 4680263556727268626
+      floor_6: -3085053661432295534
+      floor_60: 6270759088016066889
+      floor_61: 4313418510426007440
+      floor_62: -2447310767808308064
+      floor_63: 1592534341640542477
+      floor_64: -5165232216242652117
+      floor_65: 4848861171975894756
+      floor_66: 258367513055578765
+      floor_67: -1989760086436585257
+      floor_68: 6620005761863790814
+      floor_69: -549093599289225742
+      floor_7: 601623144054556460
+      floor_70: -460464179060072238
+      floor_71: 8601314467375204076
+      floor_72: -3662621041629244273
+      floor_8: 7700971350373784707
+      floor_9: 6482533309307412173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
