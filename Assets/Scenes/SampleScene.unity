@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   follow: {fileID: 1410145093}
-  smoothTime: 1
+  smoothTime: 0.8
   maxDistance: 3
 --- !u!1 &778016804
 GameObject:
