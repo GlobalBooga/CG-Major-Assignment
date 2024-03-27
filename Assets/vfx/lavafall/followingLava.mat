@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5446558730089918299
+--- !u!114 &-8460596391752501348
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: lavafall
-  m_Shader: {fileID: -6465566751694194690, guid: 185db10b2a084df418d695c481d9603d, type: 3}
+  m_Name: followingLava
+  m_Shader: {fileID: -6465566751694194690, guid: a4866fd9fe599ba4b8c06f2bf8efc19a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -37,11 +37,31 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _SampleTexture2D_052b0a976d8f48b584d2a4fa8881768d_Texture_1_Texture2D:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_1c44b9b00e4d4d2586e6f34449837eb7_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: c3a20de8fc029874aa0543d890e64926, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_cbcab37f5d844b71ae5bc8a24556d7a8_Texture_1_Texture2D:
+    - _SampleTexture2D_38a8dac1c6ac480caf79e954f7963de5_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: c3a20de8fc029874aa0543d890e64926, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_e47cc03009844d53a2f1b18b38ab2609_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: c3a20de8fc029874aa0543d890e64926, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -59,13 +79,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _EnableExternalAlpha: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _lavaFallingSpeed: {r: 0, g: 0.29, b: 0, a: 0}
-    - _lavastrech: {r: 3.9, g: 0.34, b: 0, a: 0}
-    - _maincolor: {r: 1, g: 0.014920928, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _lavaFallingSpeed: {r: -0.01, g: -0.2, b: 0, a: 0}
+    - _lavastrech: {r: 2.11, g: -2.47, b: 0, a: 0}
+    - _maincolor: {r: 1, g: 0, b: 0, a: 0}
     - _orange: {r: 1, g: 0.4048265, b: 0, a: 0}
-    - _subcolor: {r: 1, g: 0.9936536, b: 0.035294116, a: 0}
+    - _subcolor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
